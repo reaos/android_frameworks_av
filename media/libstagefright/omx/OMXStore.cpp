@@ -161,7 +161,6 @@ void OMXStore::addPlugin(OMXPluginBase *plugin) {
                 }
             }
             if (skip) {
-                continue;
             }
         }
 

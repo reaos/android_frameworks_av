@@ -1,0 +1,27 @@
+# Flags for aaudio
+#
+# Please add flags in alphabetical order.
+
+package: "com.android.media.aaudio"
+container: "system"
+
+flag {
+    name: "new_data_callback"
+    namespace: "media_audio"
+    description: "New data callback in AAudio."
+    bug: "406332239"
+}
+
+flag {
+    name: "offload_support"
+    namespace: "media_audio"
+    description: "Enable offload support in AAudio."
+    bug: "372041799"
+}
+
+flag {
+    name: "sample_rate_conversion"
+    namespace: "media_audio"
+    description: "Enable the AAudio sample rate converter."
+    bug: "219533889"
+}

@@ -1,0 +1,23 @@
+# Bug component: 1344
+jmtrivi@google.com
+atneya@google.com
+elaurent@google.com
+essick@google.com
+hunga@google.com
+jiabin@google.com
+lajos@google.com
+mnaganov@google.com
+nchalko@google.com
+pvlad@google.com
+quxiangfang@google.com
+robertshih@google.com
+robertwu@google.com
+taklee@google.com
+wonsik@google.com
+yaoshunkai@google.com
+
+# For TEST_MAPPING tv-presubmit and tv-postsubmit configurations:
+per-file TEST_MAPPING = blindahl@google.com
+
+# go/android-fwk-media-solutions for info on areas of ownership.
+include platform/frameworks/av:/media/janitors/media_solutions_OWNERS

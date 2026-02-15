@@ -1,0 +1,189 @@
+# Audio flags intended for general consumption (cross-cutting), but NOT included in framework.
+#
+# Please add flags in alphabetical order.
+
+package: "com.android.media.audio"
+container: "system"
+
+flag {
+    name: "alarm_min_volume_zero"
+    namespace: "media_audio"
+    description: "Support configuring alarm min vol to zero"
+    bug: "296884402"
+}
+
+flag {
+    name: "abs_volume_prioritizes_abs_device"
+    namespace: "media_audio"
+    description: "When receiving a volume command from an absolute volume device we "
+                 "prioritize selecting the available absolute device for volume change"
+    bug: "399307939"
+}
+
+flag {
+    name: "abs_volume_stream_always_max"
+    namespace: "media_audio"
+    description: "The stream that drives the absolute volume should always have the highest index"
+    bug: "439668753"
+}
+
+flag {
+    name: "as_device_connection_failure"
+    namespace: "media_audio"
+    description: "AudioService handles device connection failures."
+    bug: "326597760"
+}
+
+flag {
+    name: "audio_stream_bt_sco_cleanup"
+    namespace: "media_audio"
+    description: "Remove any usages of AUDIO_STREAM_BLUETOOTH_SCO from the audioserver."
+    bug: "441152611"
+}
+
+flag {
+    name: "audio_eraser_effect"
+    namespace: "media_audio"
+    description: "Enable audio eraser effect"
+    bug: "367667349"
+}
+
+flag {
+    name: "check_route_in_get_audio_mix_port"
+    namespace: "media_audio"
+    description: "Checks routing in the API getAudioMixPort to respect"
+                 "connectivity between mix ports and device ports as"
+                 "indicated by getAudioRoutes."
+    bug: "367117623"
+}
+
+flag {
+    name: "defer_wear_permission_updates"
+    namespace: "media_audio"
+    description:
+        "defer permission updates to reduce pressure"
+        "on app launch latency on lower core devices."
+    bug: "380347376"
+}
+
+flag {
+    name: "disable_prescale_absolute_volume"
+    namespace: "media_audio"
+    description:
+        "Disable pre-scale absolute volume."
+    bug: "302553525"
+}
+
+flag {
+    name: "equal_sco_lea_vc_index_range"
+    namespace: "media_audio"
+    description:
+        "Introduce the same index range for voice calls over SCO and "
+        "LE audio"
+    bug: "364364777"
+}
+
+flag {
+    name: "equal_sco_ha_vc_index_range"
+    namespace: "media_audio"
+    description:
+        "Introduce the same index range for voice calls over SCO and "
+        "hearing aids"
+    bug: "416418971"
+}
+
+flag {
+    name: "hardening_partial"
+    is_exported: true
+    namespace: "media_audio"
+    description: "Flag for partial enforcement of hardening"
+    bug: "376480814"
+}
+
+flag {
+    name: "hardening_partial_volume"
+    namespace: "media_audio"
+    description: "Flag for partial enforcement of volume hardening"
+    bug: "376480814"
+}
+
+flag {
+    name: "hardening_strict"
+    is_exported: true
+    namespace: "media_audio"
+    description: "Flag for strict enforcement (deny access) of hardening"
+    bug: "376480814"
+}
+
+flag {
+    name: "optimize_bt_device_switch"
+    namespace: "media_audio"
+    description: "Optimize the Bluetooth active device switch sequence"
+    bug: "373867402"
+}
+
+flag {
+    name: "replace_stream_bt_sco"
+    namespace: "media_audio"
+    description:
+        "Replace internally STREAM_BLUETOOTH_SCO with STREAM_VOICE_CALL"
+    bug: "345024266"
+}
+
+flag {
+    name: "ring_my_car"
+    namespace: "media_audio"
+    description:
+        "Incoming ringtones will not be muted based on ringer mode when connected to a car"
+    bug: "319515324"
+}
+
+flag {
+    name: "ringer_mode_affects_alarm"
+    namespace: "media_audio"
+    description:
+        "Support a configuration where ringer mode affects alarm stream"
+    bug: "312456558"
+}
+
+flag {
+    name: "spatializer_offload"
+    namespace: "media_audio"
+    description: "Enable spatializer offload"
+    bug: "307842941"
+}
+
+flag {
+    name: "spatializer_upmix"
+    namespace: "media_audio"
+    description: "Enable spatializer upmix"
+    bug: "323985367"
+}
+
+flag {
+    name: "stereo_spatialization"
+    namespace: "media_audio"
+    description: "Enable stereo channel mask for spatialization."
+    bug: "303920722"
+}
+
+flag {
+    name: "stereo_spatialization_binaural_transaural"
+    namespace: "media_audio"
+    description: "Allows selective stereo spatialization enablement for binaural or transaural"
+    bug: "417494541"
+}
+
+flag {
+    name: "update_preferred_devices_for_strategy"
+    namespace: "media_audio"
+    description: "Use AudioDeviceInventory cache for getPreferredDevicesForStrategy"
+    bug: "417481226"
+}
+
+flag {
+    name: "volume_refactoring"
+    namespace: "media_audio"
+    description: "Refactor the audio volume internal architecture logic"
+    bug: "324152869"
+}
